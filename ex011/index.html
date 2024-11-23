@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes, ou simplesmente 
+    aumente e diminua o tamanho do seu navegador
+    </p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/quadrado_300.png" type="image/png">
+        <source media="(max-width:1050px )" srcset="imagens/quadrado_700.png" type="image/png">
+        <img src="imagens/quadrado_1000.png" alt="Imagem flexível">
+    </picture>
+    <!--A imagem maior vai dentro do img e acima dela vai os sources, em ordem de tamanho, se for diferente dá erro-->
+
+    <h1>Reproduzindo aúdio</h1>
+    <p>Vamos aprender a reproduzir aúdios em HTML5</p>
+    <audio preload="metadata" autoplay controls> 
+        <!--colocado autoplay pra tocar sozinho, controls para aparecer o botaão no site, e preload define se carregar o audio inteiro(auto), se não vai(none), ou metadata(só carrega a imagem sobre o audio sem o audio)-->
+        <source src="midia/audio.aac" type="audio/mpeg">
+        <source src="midia/audio.ogg" type="audio/ogg">
+        <source src="midia/audio.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue carregar aúdio <a href="midia/audio.aac">clique aqui para baixar o aúdio</a></p>
+        <!--Colocado mais de um source para ter formatos de aúdio diferentes e carregar nos diferentes navegadores-->
+    </audio>
+    <p>Link do vídeo <a href="https://www.youtube.com/watch?v=4OZYsFl-J9s&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=33" target="_blank" rel="external"> aqui</a></p>
+</body>
+</html>
